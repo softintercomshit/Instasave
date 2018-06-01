@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FeedCell" id="HT7-OB-9U4" customClass="FeedCell" customModule="InstaSave" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HT7-OB-9U4" id="iFd-bP-79F">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="399.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APa-oL-6Gz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RoJ-9Q-PiB">
+                                <rect key="frame" x="10" y="10" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="J49-qK-41I"/>
+                                    <constraint firstAttribute="width" constant="36" id="bfl-1R-ZbU"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-ev-3Ds">
+                                <rect key="frame" x="329" y="10" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="XGh-PM-a7c"/>
+                                    <constraint firstAttribute="width" constant="36" id="xOO-uu-rlm"/>
+                                </constraints>
+                                <state key="normal" image="onPhotoDownload_icon"/>
+                                <connections>
+                                    <action selector="saveMedia:" destination="HT7-OB-9U4" eventType="touchUpInside" id="tBL-n2-NWg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGW-IE-IOX">
+                                <rect key="frame" x="54" y="13" width="267" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.39607843139999999" green="0.2784313725" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openOwnerFeed:" destination="HT7-OB-9U4" eventType="touchUpInside" id="9wk-vM-HOW"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mpm-my-KgD">
+                                <rect key="frame" x="0.0" y="52" width="375" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="RBg-qE-WY6"/>
+                                </constraints>
+                                <color key="progressTintColor" red="1" green="0.13725490200000001" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tPv-ev-3Ds" firstAttribute="leading" secondItem="aGW-IE-IOX" secondAttribute="trailing" constant="8" id="7x0-jB-ryH"/>
+                            <constraint firstItem="RoJ-9Q-PiB" firstAttribute="centerY" secondItem="APa-oL-6Gz" secondAttribute="centerY" id="9E1-Ee-gO2"/>
+                            <constraint firstAttribute="trailing" secondItem="tPv-ev-3Ds" secondAttribute="trailing" constant="10" id="C1I-MM-Slk"/>
+                            <constraint firstItem="aGW-IE-IOX" firstAttribute="centerY" secondItem="APa-oL-6Gz" secondAttribute="centerY" id="WfL-f1-nDV"/>
+                            <constraint firstAttribute="trailing" secondItem="Mpm-my-KgD" secondAttribute="trailing" id="bdv-Bf-enH"/>
+                            <constraint firstItem="aGW-IE-IOX" firstAttribute="leading" secondItem="RoJ-9Q-PiB" secondAttribute="trailing" constant="8" id="cNU-KB-Uzt"/>
+                            <constraint firstItem="Mpm-my-KgD" firstAttribute="leading" secondItem="APa-oL-6Gz" secondAttribute="leading" id="cqF-Z8-sxI"/>
+                            <constraint firstAttribute="bottom" secondItem="Mpm-my-KgD" secondAttribute="bottom" id="eO3-0l-OSw"/>
+                            <constraint firstItem="tPv-ev-3Ds" firstAttribute="centerY" secondItem="APa-oL-6Gz" secondAttribute="centerY" id="jxg-DH-Ug5"/>
+                            <constraint firstItem="RoJ-9Q-PiB" firstAttribute="leading" secondItem="APa-oL-6Gz" secondAttribute="leading" constant="10" id="pqF-27-wAR"/>
+                        </constraints>
+                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KBn-8R-mGy">
+                        <rect key="frame" x="0.0" y="56" width="375" height="343.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cP4-cB-tHu">
+                            <size key="itemSize" width="359" height="346"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="HT7-OB-9U4" id="Cdm-PC-mT6"/>
+                            <outlet property="delegate" destination="HT7-OB-9U4" id="grJ-vx-KZO"/>
+                        </connections>
+                    </collectionView>
+                    <pageControl opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ulU-bR-4r9">
+                        <rect key="frame" x="168" y="379" width="39" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="1pe-OV-FwQ"/>
+                        </constraints>
+                        <color key="pageIndicatorTintColor" red="0.39607843139999999" green="0.2784313725" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </pageControl>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="ulU-bR-4r9" firstAttribute="centerX" secondItem="KBn-8R-mGy" secondAttribute="centerX" id="07n-mX-36i"/>
+                    <constraint firstItem="APa-oL-6Gz" firstAttribute="top" secondItem="iFd-bP-79F" secondAttribute="top" id="5lD-cd-JdZ"/>
+                    <constraint firstAttribute="bottom" secondItem="ulU-bR-4r9" secondAttribute="bottom" id="LqB-Me-fkv"/>
+                    <constraint firstItem="KBn-8R-mGy" firstAttribute="leading" secondItem="iFd-bP-79F" secondAttribute="leading" id="UB1-LE-VZa"/>
+                    <constraint firstItem="KBn-8R-mGy" firstAttribute="top" secondItem="iFd-bP-79F" secondAttribute="top" constant="56" id="VFe-Iy-Ju9"/>
+                    <constraint firstAttribute="bottom" secondItem="KBn-8R-mGy" secondAttribute="bottom" id="l4f-Wy-FK5"/>
+                    <constraint firstAttribute="trailing" secondItem="APa-oL-6Gz" secondAttribute="trailing" id="lOo-Ee-UPI"/>
+                    <constraint firstAttribute="trailing" secondItem="KBn-8R-mGy" secondAttribute="trailing" id="oYt-ro-cnY"/>
+                    <constraint firstItem="KBn-8R-mGy" firstAttribute="top" secondItem="APa-oL-6Gz" secondAttribute="bottom" id="oyC-f6-Jaa"/>
+                    <constraint firstItem="APa-oL-6Gz" firstAttribute="leading" secondItem="iFd-bP-79F" secondAttribute="leading" id="pYc-ZG-adL"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="mediaCollectionView" destination="KBn-8R-mGy" id="e23-NI-upL"/>
+                <outlet property="mediaFeedPageControl" destination="ulU-bR-4r9" id="KVE-oc-SbZ"/>
+                <outlet property="profileImageView" destination="RoJ-9Q-PiB" id="vKp-2p-gXS"/>
+                <outlet property="progressView" destination="Mpm-my-KgD" id="jCu-VQ-vgy"/>
+                <outlet property="userNameButton" destination="aGW-IE-IOX" id="pdq-mH-hFU"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="onPhotoDownload_icon" width="36" height="36"/>
+    </resources>
+</document>

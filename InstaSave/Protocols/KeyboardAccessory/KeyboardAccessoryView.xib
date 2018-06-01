@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SanFranciscoDisplay-Semibold.otf">
+            <string>SanFranciscoDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KeyboardAccessoryView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tjx-vl-eCr">
+                    <rect key="frame" x="8" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="1KG-7q-meL"/>
+                        <constraint firstAttribute="height" constant="50" id="bFA-bL-psQ"/>
+                    </constraints>
+                    <state key="normal" image="upIcon"/>
+                    <connections>
+                        <action selector="upButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="kqq-NZ-2ml"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwp-N8-WjQ">
+                    <rect key="frame" x="58" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="04L-y7-zJf"/>
+                        <constraint firstAttribute="width" constant="50" id="oW2-HJ-Lk8"/>
+                    </constraints>
+                    <state key="normal" image="downIcon"/>
+                    <connections>
+                        <action selector="downButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="mHi-Fb-6Um"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2T-z2-Ddv">
+                    <rect key="frame" x="317" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="A5v-cj-X2d"/>
+                        <constraint firstAttribute="height" constant="50" id="k56-zY-Pmk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SanFranciscoDisplay-Semibold" family="San Francisco Display" pointSize="18"/>
+                    <state key="normal" title="Done"/>
+                    <connections>
+                        <action selector="doneButtonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="huG-PA-gGz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Jwp-N8-WjQ" firstAttribute="leading" secondItem="Tjx-vl-eCr" secondAttribute="trailing" id="DVI-DV-njR"/>
+                <constraint firstItem="Tjx-vl-eCr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Eap-D9-HrS"/>
+                <constraint firstItem="w2T-z2-Ddv" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YTF-au-KIB"/>
+                <constraint firstItem="Tjx-vl-eCr" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YWA-94-ri2"/>
+                <constraint firstAttribute="trailing" secondItem="w2T-z2-Ddv" secondAttribute="trailing" constant="8" id="fM2-Mu-k5J"/>
+                <constraint firstItem="Jwp-N8-WjQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uuZ-K2-WrO"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="downButtonOutlet" destination="Jwp-N8-WjQ" id="xel-oN-bx0"/>
+                <outlet property="upButtonOutlet" destination="Tjx-vl-eCr" id="cma-ik-hFy"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="downIcon" width="32" height="32"/>
+        <image name="upIcon" width="32" height="32"/>
+    </resources>
+</document>

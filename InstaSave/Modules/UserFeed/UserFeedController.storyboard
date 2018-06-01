@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Feed Controller-->
+        <scene sceneID="F7Y-J7-4Cn">
+            <objects>
+                <viewController storyboardIdentifier="UserFeedController" id="THb-vS-XSF" userLabel="User Feed Controller" customClass="UserFeedController" customModule="InstaSave" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Cb-L5-T1z"/>
+                        <viewControllerLayoutGuide type="bottom" id="hdk-Tj-sxK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FnB-wL-EjF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r9M-Gn-DcU">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="400" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="rt5-sE-DO4">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="THb-vS-XSF" id="Njq-rW-9Q7"/>
+                                    <outlet property="delegate" destination="THb-vS-XSF" id="T5x-Sc-2ae"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hdk-Tj-sxK" firstAttribute="top" secondItem="rt5-sE-DO4" secondAttribute="bottom" id="M9b-wQ-XLr"/>
+                            <constraint firstItem="rt5-sE-DO4" firstAttribute="leading" secondItem="FnB-wL-EjF" secondAttribute="leading" id="T3X-it-cfV"/>
+                            <constraint firstAttribute="trailing" secondItem="rt5-sE-DO4" secondAttribute="trailing" id="cRC-RY-AzW"/>
+                            <constraint firstItem="rt5-sE-DO4" firstAttribute="top" secondItem="2Cb-L5-T1z" secondAttribute="bottom" id="tBI-Ar-9cK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="feedTableView" destination="rt5-sE-DO4" id="czo-df-VZ5"/>
+                        <outlet property="noFeedlabel" destination="ROt-Gc-ee7" id="CmE-bo-Mhr"/>
+                    </connections>
+                </viewController>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ROt-Gc-ee7">
+                    <rect key="frame" x="0.0" y="0.0" width="224" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6O8-Ua-rw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="99"/>
+        </scene>
+    </scenes>
+</document>

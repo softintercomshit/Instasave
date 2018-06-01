@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Followers Controller-->
+        <scene sceneID="88H-11-S11">
+            <objects>
+                <tableViewController storyboardIdentifier="FollowersController" id="Yb5-Rp-jfT" userLabel="Followers Controller" customClass="FollowersController" customModule="InstaSave" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="-1" id="Qd8-bP-eCU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="58" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FollowerCell" id="3bR-rr-Jd2" customClass="FollowerCell" customModule="InstaSave" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3bR-rr-Jd2" id="2r9-zu-ahW">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8k7-ff-NbS">
+                                            <rect key="frame" x="8" y="15" width="50" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="PXr-1B-Nip"/>
+                                                <constraint firstAttribute="height" constant="50" id="iyb-sJ-0lI"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aW5-p4-9ao">
+                                            <rect key="frame" x="78" y="30" width="281" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Erd-CD-1Id"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LHR-os-xid">
+                                            <rect key="frame" x="23" y="30" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LHR-os-xid" firstAttribute="centerX" secondItem="8k7-ff-NbS" secondAttribute="centerX" id="1OG-Eu-5CN"/>
+                                        <constraint firstItem="8k7-ff-NbS" firstAttribute="leading" secondItem="2r9-zu-ahW" secondAttribute="leading" constant="8" id="bNS-ax-XI0"/>
+                                        <constraint firstItem="aW5-p4-9ao" firstAttribute="centerY" secondItem="8k7-ff-NbS" secondAttribute="centerY" id="drX-x7-LDh"/>
+                                        <constraint firstItem="aW5-p4-9ao" firstAttribute="leading" secondItem="8k7-ff-NbS" secondAttribute="trailing" constant="20" id="kqk-lR-amZ"/>
+                                        <constraint firstItem="LHR-os-xid" firstAttribute="centerY" secondItem="8k7-ff-NbS" secondAttribute="centerY" id="qXX-nQ-7Lb"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="aW5-p4-9ao" secondAttribute="trailing" constant="8" id="vwa-5a-GDW"/>
+                                        <constraint firstItem="8k7-ff-NbS" firstAttribute="centerY" secondItem="2r9-zu-ahW" secondAttribute="centerY" id="xHO-Lb-HQe"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="followerImageView" destination="8k7-ff-NbS" id="BwC-rv-0E9"/>
+                                    <outlet property="followerNameLabel" destination="aW5-p4-9ao" id="iBk-A6-52n"/>
+                                    <outlet property="indicatorView" destination="LHR-os-xid" id="vUi-bT-0fp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yb5-Rp-jfT" id="LPN-dk-D71"/>
+                            <outlet property="delegate" destination="Yb5-Rp-jfT" id="eZF-EU-N9n"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="CXW-1B-yIk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SqK-B8-Tmm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="-90"/>
+        </scene>
+    </scenes>
+</document>

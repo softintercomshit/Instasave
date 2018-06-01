@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Preview Controller-->
+        <scene sceneID="jOF-LB-a0T">
+            <objects>
+                <viewController storyboardIdentifier="PhotoPreviewController" id="3Cg-A6-Cgh" userLabel="Photo Preview Controller" customClass="PhotoPreviewController" customModule="InstaSave" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6MA-N0-mjY"/>
+                        <viewControllerLayoutGuide type="bottom" id="q2k-WZ-3Nx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m3u-sm-WHD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK1-FO-FTb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FQt-H2-6h7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="FQt-H2-6h7" firstAttribute="leading" secondItem="UK1-FO-FTb" secondAttribute="leading" id="4dB-kh-qY3"/>
+                                    <constraint firstItem="FQt-H2-6h7" firstAttribute="height" secondItem="UK1-FO-FTb" secondAttribute="height" id="OWB-6v-Pnz"/>
+                                    <constraint firstItem="FQt-H2-6h7" firstAttribute="top" secondItem="UK1-FO-FTb" secondAttribute="top" id="UWc-id-SQy"/>
+                                    <constraint firstAttribute="trailing" secondItem="FQt-H2-6h7" secondAttribute="trailing" id="jsv-IN-dHs"/>
+                                    <constraint firstAttribute="bottom" secondItem="FQt-H2-6h7" secondAttribute="bottom" id="svV-Kb-p3C"/>
+                                    <constraint firstItem="FQt-H2-6h7" firstAttribute="width" secondItem="UK1-FO-FTb" secondAttribute="width" id="zrc-4b-2e1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="3Cg-A6-Cgh" id="p8D-Ts-IH9"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1M-OC-wUV" userLabel="Save Button">
+                                <rect key="frame" x="323" y="28" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Ur5-E4-0LA"/>
+                                    <constraint firstAttribute="width" constant="36" id="ioc-Sl-Pu5"/>
+                                </constraints>
+                                <state key="normal" image="onPhotoDownload_icon"/>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="3Cg-A6-Cgh" eventType="touchUpInside" id="i1d-l9-7mn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVE-sS-oY5">
+                                <rect key="frame" x="16" y="28" width="46" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="T3O-ab-fyR"/>
+                                    <constraint firstAttribute="width" constant="46" id="e5j-ef-Lej"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.39607843139999999" green="0.2784313725" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtonAction:" destination="3Cg-A6-Cgh" eventType="touchUpInside" id="aep-Ik-MAx"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rmB-Hc-0eR">
+                                <rect key="frame" x="177" y="333.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q2k-WZ-3Nx" firstAttribute="top" secondItem="UK1-FO-FTb" secondAttribute="bottom" id="3Ab-dg-yBj"/>
+                            <constraint firstItem="UK1-FO-FTb" firstAttribute="top" secondItem="6MA-N0-mjY" secondAttribute="bottom" id="WS4-Ck-auV"/>
+                            <constraint firstItem="b1M-OC-wUV" firstAttribute="top" secondItem="6MA-N0-mjY" secondAttribute="bottom" constant="8" id="Ws3-8s-728"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b1M-OC-wUV" secondAttribute="trailing" id="Xza-4c-3V5"/>
+                            <constraint firstItem="rmB-Hc-0eR" firstAttribute="centerX" secondItem="UK1-FO-FTb" secondAttribute="centerX" id="ggw-0q-FqK"/>
+                            <constraint firstAttribute="trailing" secondItem="UK1-FO-FTb" secondAttribute="trailing" id="i6g-Qo-aQY"/>
+                            <constraint firstItem="UK1-FO-FTb" firstAttribute="leading" secondItem="m3u-sm-WHD" secondAttribute="leading" id="iEg-Jg-Mwb"/>
+                            <constraint firstItem="AVE-sS-oY5" firstAttribute="leading" secondItem="m3u-sm-WHD" secondAttribute="leadingMargin" id="nek-2O-cTt"/>
+                            <constraint firstItem="rmB-Hc-0eR" firstAttribute="centerY" secondItem="UK1-FO-FTb" secondAttribute="centerY" id="nfL-w2-nga"/>
+                            <constraint firstItem="AVE-sS-oY5" firstAttribute="top" secondItem="6MA-N0-mjY" secondAttribute="bottom" constant="8" id="pAk-qR-ZNu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="FQt-H2-6h7" id="1to-IC-1aD"/>
+                        <outlet property="indicatorView" destination="rmB-Hc-0eR" id="IA4-XT-dyG"/>
+                        <outlet property="scrollView" destination="UK1-FO-FTb" id="cDN-S6-B3W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ArK-d2-Td7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="147"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="onPhotoDownload_icon" width="36" height="36"/>
+    </resources>
+</document>

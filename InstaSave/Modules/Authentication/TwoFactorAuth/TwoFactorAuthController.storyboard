@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TwoFactorAuthController-->
+        <scene sceneID="Dsn-ZR-Gby">
+            <objects>
+                <viewController storyboardIdentifier="TwoFactorAuthController" id="PDv-kk-Din" userLabel="TwoFactorAuthController" customClass="TwoFactorAuthController" customModule="InstaLikes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cCY-eK-SOd"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wkn-TX-yEa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bWs-ew-D5b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the code we sent to your number ending in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntq-oS-7jL">
+                                <rect key="frame" x="58" y="257.5" width="260" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="21" id="x3X-Iz-MO9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Security code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xee-tv-6wf">
+                                <rect key="frame" x="57.5" y="318.5" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="HyZ-TD-yan"/>
+                                    <constraint firstAttribute="height" constant="30" id="QwM-YV-KRz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re0-sP-Lvx">
+                                <rect key="frame" x="57.5" y="368.5" width="260" height="30"/>
+                                <color key="backgroundColor" red="0.21960784310000001" green="0.59215686270000001" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jbG-q3-Z3e"/>
+                                </constraints>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="PDv-kk-Din" eventType="touchUpInside" id="oaV-P9-YgB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Didn't get a security code? We can" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKD-sA-aRf">
+                                <rect key="frame" x="58" y="418.5" width="260" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwP-JC-vZJ">
+                                <rect key="frame" x="156" y="438" width="64" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C1r-a7-la0"/>
+                                </constraints>
+                                <state key="normal" title="resend it."/>
+                                <connections>
+                                    <action selector="resendSecurityCode:" destination="PDv-kk-Din" eventType="touchUpInside" id="OHN-MY-7Ln"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="re0-sP-Lvx" firstAttribute="top" secondItem="xee-tv-6wf" secondAttribute="bottom" constant="20" id="0wB-cY-RGT"/>
+                            <constraint firstItem="FKD-sA-aRf" firstAttribute="top" secondItem="re0-sP-Lvx" secondAttribute="bottom" constant="20" id="3K9-Ol-di3"/>
+                            <constraint firstItem="FKD-sA-aRf" firstAttribute="width" secondItem="re0-sP-Lvx" secondAttribute="width" id="4fl-N5-uTJ"/>
+                            <constraint firstItem="re0-sP-Lvx" firstAttribute="width" secondItem="xee-tv-6wf" secondAttribute="width" id="Fyw-Ch-W36"/>
+                            <constraint firstItem="FKD-sA-aRf" firstAttribute="centerX" secondItem="re0-sP-Lvx" secondAttribute="centerX" id="Iey-YZ-tw4"/>
+                            <constraint firstItem="xee-tv-6wf" firstAttribute="top" secondItem="Ntq-oS-7jL" secondAttribute="bottom" constant="20" id="JF0-BO-s75"/>
+                            <constraint firstItem="xee-tv-6wf" firstAttribute="centerX" secondItem="bWs-ew-D5b" secondAttribute="centerX" id="Ud6-1I-aF1"/>
+                            <constraint firstItem="kwP-JC-vZJ" firstAttribute="centerX" secondItem="FKD-sA-aRf" secondAttribute="centerX" id="diU-sb-bfy"/>
+                            <constraint firstItem="kwP-JC-vZJ" firstAttribute="top" secondItem="FKD-sA-aRf" secondAttribute="bottom" id="hnD-ar-KAr"/>
+                            <constraint firstItem="re0-sP-Lvx" firstAttribute="centerX" secondItem="xee-tv-6wf" secondAttribute="centerX" id="jBP-YX-SSJ"/>
+                            <constraint firstItem="Ntq-oS-7jL" firstAttribute="width" secondItem="xee-tv-6wf" secondAttribute="width" id="mHL-jq-WNx"/>
+                            <constraint firstItem="Ntq-oS-7jL" firstAttribute="centerX" secondItem="xee-tv-6wf" secondAttribute="centerX" id="mnI-Ry-MUM"/>
+                            <constraint firstItem="xee-tv-6wf" firstAttribute="centerY" secondItem="bWs-ew-D5b" secondAttribute="centerY" id="p98-qN-PzD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmButton" destination="re0-sP-Lvx" id="c0M-Bb-8R4"/>
+                        <outlet property="phoneNumberLabel" destination="Ntq-oS-7jL" id="rlI-0n-wGR"/>
+                        <outlet property="securityCodeTextField" destination="xee-tv-6wf" id="BmV-Fg-rI8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ema-Ds-HcZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="183.95802098950526"/>
+        </scene>
+    </scenes>
+</document>
